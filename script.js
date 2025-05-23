@@ -34,13 +34,26 @@ async function getWeather() {
   const apiKey = "9f2c0829c7d1ea3f50e27484aab274b3"; // Replace with your API key
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
+  const iconMap = {
+    Clear: "wi-day-sunny",
+    Clouds: "wi-cloudy",
+    Rain: "wi-rain",
+    Drizzle: "wi-sprinkle",
+    Thunderstorm: "wi-thunderstorm",
+    Snow: "wi-snow",
+    Mist: "wi-fog",
+  };
+  
   try {
     const response = await fetch(url);
     const data = await response.json();
 
     if (data.cod === 200) {
+      const weatherMain = data.weather[0].main;
+      const iconClass = iconMap[weatherMain] || "wi-na";
       const result = `
         <h2>${data.name}, ${data.sys.country}</h2>
+        <i class="wi ${iconClass}" style="font-size: 48px;"></i>
         <p><strong>${data.weather[0].main}</strong>: ${data.weather[0].description}</p>
         <p>🌡️ Temp: ${data.main.temp} °C</p>
         <p>💧 Humidity: ${data.main.humidity}%</p>
