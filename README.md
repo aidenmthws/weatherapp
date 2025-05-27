@@ -21,14 +21,21 @@ A simple weather application that lets users search for any city and view real-t
 🛠️ Technologies Used
 
 HTML5 & CSS3
+
 JavaScript (Vanilla)
+
 OpenWeatherMap API
+
 Weather Icons (CDN)
+
 Google Fonts (Inter)
 
 🌱 Future Improvements
 
 Add weather forecast (hourly/daily)
+
 Auto-detect user’s current location
+
 Dark mode toggle
+
 Animated weather icons
