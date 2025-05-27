@@ -1,4 +1,3 @@
-/* Font & Background */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 body {
@@ -9,7 +8,6 @@ body {
   padding: 40px;
 }
 
-/* Main Card Container */
 .container {
   background: white;
   padding: 30px;
@@ -20,7 +18,6 @@ body {
   max-width: 90%;
 }
 
-/* Input Field + Suggestions */
 .input-group {
   position: relative;
   width: 100%;
@@ -43,7 +40,6 @@ input:focus {
   outline: none;
 }
 
-/* Dropdown Suggestions */
 #suggestions {
   list-style-type: none;
   padding: 0;
@@ -69,7 +65,6 @@ input:focus {
   background-color: #f0f0f0;
 }
 
-/* Button Styling */
 button {
   padding: 10px 20px;
   margin-top: 15px;
@@ -86,7 +81,6 @@ button:hover {
   background-color: #1c2b9c;
 }
 
-/* Weather Result Styling */
 #weatherResult {
   margin-top: 25px;
   font-size: 18px;
@@ -98,6 +92,14 @@ button:hover {
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+#weatherResult.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 #weatherResult h2 {
@@ -116,5 +118,11 @@ button:hover {
   margin: 10px auto;
   width: 80px;
   height: 80px;
+}
+
+.weather-icon {
+  font-size: 60px;
+  color: #27282e;
+  margin: 15px 0;
 }
 
