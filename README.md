@@ -17,9 +17,9 @@ A simple weather application that lets users search for any city and view real-t
 3. Make sure you replace the placeholder API key in `script.js`:
    ```js
    const apiKey = "your_api_key_here";
+Start typing a city and click "Get Weather"!
 
 🛠️ Technologies Used
-
 HTML5 & CSS3
 
 JavaScript (Vanilla)
@@ -31,7 +31,6 @@ Weather Icons (CDN)
 Google Fonts (Inter)
 
 🌱 Future Improvements
-
 Add weather forecast (hourly/daily)
 
 Auto-detect user’s current location
