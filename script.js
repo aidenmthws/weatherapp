@@ -31,7 +31,7 @@ function showSuggestions() {
 // Get weather data
 async function getWeather() {
   const city = document.getElementById("cityInput").value;
-  const apiKey = "9f2c0829c7d1ea3f50e27484aab274b3"; // Replace with your API key
+  const apiKey = "your_api_key_here"; // Replace with your API key
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
   const iconMap = {
